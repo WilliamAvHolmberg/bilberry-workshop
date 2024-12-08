@@ -54,6 +54,28 @@ export function Form() {
 }
 ```
 
+#### Available Components
+1. **Directly Installable Components**
+   ```bash
+   npx shadcn@latest add accordion alert alert-dialog aspect-ratio avatar badge button card checkbox collapsible command context-menu dialog drawer dropdown-menu form hover-card input label menubar navigation-menu popover progress radio-group scroll-area select separator sheet skeleton slider switch table tabs textarea toast toggle toggle-group tooltip
+   ```
+
+2. **Composite Components** (built using other components)
+   - Breadcrumb
+   - Calendar
+   - Carousel
+   - Chart
+   - Combobox (uses Command component)
+   - Data Table (uses Table component)
+   - Date Picker (uses Calendar component)
+   - Input OTP
+   - Pagination
+   - Resizable
+   - Sidebar
+   - Sonner
+
+When implementing new features, prefer using these pre-built components over creating custom ones. For composite components, refer to the shadcn documentation for implementation patterns.
+
 ## Best Practices
 
 1. **Component Structure**
