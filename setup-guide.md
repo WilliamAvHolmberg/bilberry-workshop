@@ -11,12 +11,18 @@
 ### 1. Install
 ```bash
 # Install frontend dependencies
-cd Web
+cd web
 npm install
 
 # Install backend dependencies
 cd ../Api
 dotnet restore
+```
+
+If you encounter an error with not having installed the `dotnet sdk` you can (on Mac OS) run 
+```bash
+brew tap isen-ng/dotnet-sdk-versions
+brew install --cask dotnet-sdk8
 ```
 
 ### 2. Configure Cursor IDE
@@ -25,10 +31,11 @@ dotnet restore
 1. Open Cursor Settings
    - Mac: `Cmd + Shift + P`
    - Windows/Linux: `Ctrl + Shift + P`
-2. Type "Settings" and select "Open Settings"
+2. Type "Settings" and select "Cursor Settings"
 3. Find "Models" section
 4. Enable "claude-3-5-sonnet-20241022"
-5. Set as default in:
+5. Open the chat (`Cmd/Ctrl + L`)
+6. Set as default in:
    - Chat: Select from model dropdown
    - Composer: Select from model dropdown
 
@@ -36,7 +43,7 @@ dotnet restore
 1. Open Cursor Chat (`Cmd/Ctrl + L`)
 2. Type `@docs`
 3. Click "Add new doc"
-4. Paste the URL: `[46elks-docs-url]`
+4. Paste the URL: `https://46elks.com/docs/overview`
 5. Wait for indexing to complete
 
 #### C. Configure System Prompt
@@ -88,7 +95,7 @@ dotnet run
 
 2. Start the frontend:
 ```bash
-cd Web
+cd web
 npm run dev
 ```
 
